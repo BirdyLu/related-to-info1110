@@ -37,8 +37,7 @@ function calcGrade(){ //
                 ratios.push(parseInt((calc.grade/calc.fullmark)*10));
             }
             catch (TypeError) {
-                console.log("Cannot find the rest quiz marks from week "+(i+1)+" :( Possibly not released yet!");
-                break;
+                console.log("Cannot find the quiz mark from week "+(i+1)+" :( Possibly not released yet!");
             }
         } 
         console.log("Horizontal bar graph of all found weekly quiz marks:");
