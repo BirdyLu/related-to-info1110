@@ -1,4 +1,4 @@
-console.log("Use calcGrade() to calculate the current grade of the all lab marks.")
+console.log("Use calcGrade() to calculate the current grade of the all lab marks; calcGrade(8) for the first 8 labs only.")
 
 function getGrade(submission_id){
     var trElement = document.getElementById('submission_' + submission_id.toString());
@@ -23,8 +23,10 @@ function each(submission_id, i){ //pass i for display purpose only
     return {grade: grade, fullmark: fullmark};
 }
 
-function calcGrade(){ //labnum: numbers of labs marks released
-    var labnum = 14;
+function calcGrade(labnum){ //labnum: numbers of labs marks released
+    if (labnum==null) {
+        labnum = 14;
+    }
     var sum = 0;
     var fullmarks = 0;
     var ratios = []
